@@ -1,0 +1,149 @@
+/* Start Global Rules */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+  /* main background) */
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  /* (card background) */
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  /* (accent) */
+  --Soft-violet: hsl(277, 64%, 61%);
+  /* (main heading, stats) */
+  --White: hsl(0, 0%, 100%);
+  /* (main paragraph) */
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* (stat headings) */
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+  --First-font-family: 'Inter', sans-serif;
+  --Second-font-family: 'Lexend Deca', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--First-font-family);
+  background-color: var(--Very-dark-blue);
+}
+
+.attribution {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  color: var(--White);
+  transform: translateX(-50%);
+  font-size: 1em;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* End Global Rules */
+main {
+  margin: auto;
+  width: 1440px;
+  height: 100vh;
+  background-color: var(--Very-dark-blue);
+  position: relative;
+}
+
+main section.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  background-color: var(--Dark-desaturated-blue);
+  color: var(--White);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+
+main section.text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 75px 60px
+}
+
+main section.text>h1 {
+  color: var(--White);
+  font-size: 2.39em;
+}
+
+main section.text>h1>span {
+  color: var(--Soft-violet);
+}
+
+main section.text p.main-paragragh {
+  color: var(--Slightly-transparent-white);
+  line-height: 1.8;
+  font-size: 1.16em;
+  flex: 1;
+  margin-top: 1.4em;
+}
+
+main section.text .info {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main section.text .info .box {
+  margin-right: 4.2em;
+}
+
+main section.text .info .box h3 {
+  font-size: 1.6em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+main section.text .info .box h3+p {
+  color: var(--Slightly-transparent-white);
+  font-family: var(--Second-font-family);
+  font-size: .9em;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  font-weight: 400;
+}
+
+main section.image {
+  position: relative;
+  width: 80%;
+}
+
+main section.image img {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+
+main section.image .image-filter {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(100%) saturate(100%) hue-rotate(0deg);
+  background-color: hsl(277, 64%, 61%);
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  object-fit: cover;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
